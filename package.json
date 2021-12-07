@@ -1,0 +1,16 @@
+{
+  "name": "PlatziVideo",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profesional de JavaScript de la escuela de JavaScript de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["platzi"],
+  "author": "Luis Mojica",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
