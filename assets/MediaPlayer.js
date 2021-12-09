@@ -36,11 +36,13 @@ MediaPlayer.prototype.unmute = function() {
 };
 
 MediaPlayer.prototype.sonido = function (){
-    if(this.media.muted){
-        this.unmute();
-    } else {
-        this.mute();
-    };
+    
+    this.media.muted = !this.media.muted;
+    // if(this.media.muted){
+    //     this.unmute();
+    // } else {
+    //     this.mute();
+    // };
 };
 
 export default MediaPlayer;
