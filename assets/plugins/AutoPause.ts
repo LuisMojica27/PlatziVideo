@@ -1,4 +1,10 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPause {
+
+    private threshold: number;
+    player: MediaPlayer;
+
     constructor(){
         this.threshold = 0.25;
         this.handlerIntersection = this.handlerIntersection.bind(this);
@@ -18,9 +24,8 @@ class AutoPause {
 
     }
 
-    handlerIntersection(entries){
+    private handlerIntersection(entries: IntersectionObserverEntry[]){
         const entry = entries[0];
-
         const isVisible = entry.intersectionRatio >= this.threshold;
 
         if (isVisible){
@@ -32,7 +37,7 @@ class AutoPause {
         console.log('La intercepción es:', entries);
     }
 
-    handlerVisibilityChange(){
+    private handlerVisibilityChange(){
         //para que el video se pause cuando cambias de pestaña
         const isVisible = document.visibilityState == "visible";
         if (isVisible) {
